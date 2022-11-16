@@ -1,0 +1,28 @@
+extends ../../layout/main.pug
+include ../../modules/mixins/mixins
+
+block variables
+	include ../../abstraction/variables
+	- let anotherPage= true
+	- let developPage= true
+block head
+	include ../../partials/head/head
+
+block content
+	div(class='overlay')
+	button(type=button class="btnclose", id='btnclose')
+		span(class='spanbtnclose')
+		span(class='spanbtnclose')
+	include ../../sections/header/header
+	main(class=main)
+		include ../../sections/intro-section/intro-section
+		include ../../sections/variantsSites-section/variantsSites-section
+		include ../../sections/circles-section/circles-section
+		include ../../sections/formDevelop-section/formDevelop-section
+		include ../../sections/prices-section/prices-section
+		include ../../sections/tarifsHelp-sectiion/tarifsHelp-sectiion
+		include ../../sections/mainForm-section/mainForm-section
+block footer
+	include  ../../sections/footer/footer
+block templates
+	include  ../../blocks/popups/popupCall

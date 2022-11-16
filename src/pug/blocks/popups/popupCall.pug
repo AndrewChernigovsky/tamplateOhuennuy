@@ -1,0 +1,36 @@
+div(class=ClassPopupCall id=popupCall__mainID)
+	.container
+		div(class=ClassPopupCallBtnWrapper)
+			button(class=ClassCallButtonClose type=button id=popupCallButtonCLoseID)
+				span Закрыть
+		if mainPage
+			form(class='js-formPopup' action='php/form/formPopup.php' name=popupCallName method=post class=ClasspopupCallForm id=popupCallID)
+				div(class=ClassPopupCall__wrapper)
+					div(class='inputs')
+						input(class='input' type="text", placeholder='Name', name='username', value='' required)
+						input(class='input' type="text", placeholder='Telephone', name='userphone', value='' data-mask="tel" required)
+					div(class='politeCheckboxWrapper')
+						input(type="checkbox", name='polite', id='politeCheckbox' required)
+						label(class='labelCallPopupCheckbox', for="politeCheckbox")
+						div(class='polite-p-wrapper')
+							p я прочитал и согласен с &nbsp;
+							=" "
+							a(href='../pages/polite.html') политикой конфиденциальности
+					div(class='wrapperButton')
+						button(class=ClassMainForm__button type=submit disabled id='getCall')= 'Заказать звонок'
+
+		if anotherPage
+			form(class='js-formPopup' action='../php/form/formPopup.php' name=popupCallName method=post class=ClasspopupCallForm id=popupCallID)
+				div(class=ClassPopupCall__wrapper)
+					div(class='inputs')
+						input(class='input' type="text", placeholder='Name', name='username', value='' required)
+						input(class='input' type="text", placeholder='Telephone', name='userphone', value='' data-mask="tel" required)
+					div(class='politeCheckboxWrapper')
+						input(class='input' type="checkbox", name='polite', id='politeCheckbox' required)
+						label(class='labelCallPopupCheckbox', for="politeCheckbox")
+						div(class='polite-p-wrapper')
+							p я прочитал и согласен с &nbsp;
+							=" "
+							a(href='../pages/polite.html') политикой конфиденциальности
+					div(class='wrapperButton')
+						button(class=ClassMainForm__button type=submit disabled id='getCall')= 'Заказать звонок'

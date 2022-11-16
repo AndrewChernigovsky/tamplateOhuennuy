@@ -1,0 +1,155 @@
+.helpers-section {
+	padding-bottom: 10rem;
+
+	@include media('>=desktop') {
+		padding-bottom: 23rem;
+	}
+
+	&__inner {
+	    display: flex;
+		justify-content: flex-start;
+		align-items: stretch;
+		overflow-x: scroll;
+		padding-bottom: 2rem;
+	}
+
+	&__title {
+		font-family: $MazzardHBold;
+
+		@include media('>=desktop') {
+			font-size: 3.6rem;
+		}
+
+		span:first-of-type {
+			text-transform: uppercase;
+		}
+	}
+
+	&__h2-span {
+		font-family: $MazzardH;
+
+		&:last-of-type {
+			transition: $base-transition;
+			font-family: $MazzardHBold;
+		}
+	}
+
+	&__image-wrapper {
+		position: relative;
+		height: 500px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-basis: 50%;
+	}
+
+	&__image {
+		background-color: $red;
+		object-fit: cover;
+		position: absolute;
+		top: -240px;
+		left: -100px;
+		width: 100%;
+		height: inherit;
+		z-index: -1;
+	}
+
+	&__card-wrapper {
+		box-shadow: inset 2px 2px 19px rgba(0, 0, 0, 0.13);
+		border-radius: 30px;
+		padding: 5px;
+		margin-left: 0.5rem;
+
+		@include media('>=phone-lg') {
+			padding: 10px;
+			margin-left: 1rem;
+		}
+
+		@include media('>=desktop') {
+			padding: 20px;
+			flex-basis: 35%;
+		}
+
+		&:first-of-type {
+			margin-left: 0;
+		}
+	}
+
+	&__card {
+		display: flex;
+		flex-basis: 100%;
+		min-height: 175px;
+		color: $black;
+		padding: 1rem;
+		align-items: flex-start;
+		justify-content: flex-end;
+		flex-direction: column;
+		white-space: nowrap;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-color: $white;
+		border-radius: 25px;
+		box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.03), 0px -1px 0px 1px rgba(0, 0, 0, 0.05);
+
+		@include media('>=phone-lg') {
+		}
+
+		@include media('>=tablet') {
+			flex-basis: 30%;
+		}
+
+		@include media('>=desktop') {
+			padding: 2rem;
+			min-height: 638px;
+		}
+
+		.paragraph-base {
+			margin-bottom: 1rem;
+			font-size: 0.8rem;
+
+			@include media('>=desktop') {
+				font-size: 2.1rem;
+				margin-bottom: 3rem;
+			}
+		}
+
+		.title__h2 {
+			font-size: 1.5rem;
+			margin-bottom: 0.5rem;
+
+			@include media('>=desktop') {
+				font-size: 5.6rem;
+				margin-bottom: 2.5rem;
+			}
+		}
+	}
+}
+
+.helpers-section.mainPageHelpersSection {
+	@include media('>=desktop') {
+		padding-bottom: 25rem;
+	}
+
+	.title__h2 {
+		font-size: 1.5rem;
+		margin-bottom: 0.5rem;
+
+		@include media('>=desktop') {
+			font-size: 5.6rem;
+			margin-bottom: 2.5rem;
+		}
+	}
+
+	.helpers-section__title {
+		font-size: 1.2rem;
+
+		@include media('>=phone-lg') {
+			font-size: 2.4rem;
+		}
+
+		@include media('>=desktop') {
+			font-size: 3.6rem;
+		}
+	}
+}

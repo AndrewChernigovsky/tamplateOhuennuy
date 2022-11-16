@@ -1,0 +1,242 @@
+.seoPrice-section {
+	color: $black;
+
+	&__wrapper {
+		&:hover {
+			.seoPrice-section__cost {
+				opacity: 1;
+				transition: 1s ease-in-out;
+			}
+		}
+	}
+
+	&__inner {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		margin-bottom: 1rem;
+		gap: 1rem;
+
+		@include media(">=tablet") {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 2rem;
+		}
+
+		// @include media(">=widescreen") {
+		// 	display: flex;
+		// 	justify-content: space-between;
+		// }
+	}
+
+	&__card {
+		border: 2px solid $black;
+		padding: 0.5rem 0.5rem 0.5rem 1rem;
+		position: relative;
+
+		@include media('>=tablet') {
+			padding: 1rem 1rem 1rem 2rem;
+		}
+
+		@include media('>=desktop') {
+			padding: 2rem 2rem 2rem 4rem;
+		}
+
+		p:not(.seoPrice-section__price) {
+			font-size: 1.6rem;
+			font-family: $Montserrat;
+
+			@include media('>=tablet') {
+				font-size: 2.4rem;
+			}
+		}
+
+		p:first-of-type {
+			padding-bottom: 1rem;
+			font-size: 0.8rem;
+
+			@include media('>=tablet') {
+				font-size: 1.6rem;
+			}
+
+			@include media('>=desktop') {
+				font-size: 2.4rem;
+			}
+		}
+
+		ul {
+			list-style-type: disc;
+			min-height: 210px;
+			padding-bottom: 2rem;
+			list-style-position: outside;
+			padding-left: 0.6rem;
+
+			@include media('>=340px') {
+				padding-left: 1.2rem;
+			}
+
+			@include media('>=tablet') {
+				min-height: 300px;
+				padding-bottom: 20rem;
+				padding-left: 1.8rem;
+			}
+		}
+
+		li {
+			font-size: 0.6rem;
+			font-family: $Montserrat;
+
+			@include media('>=tablet') {
+				font-size: 1.2rem;
+			}
+
+			@include media('>=desktop') {
+				font-size: 2.4rem;
+			}
+		}
+	}
+
+	&__card-footer {
+		position: absolute;
+		bottom: 0;
+		padding-bottom: 2rem;
+
+
+		p:not(.seoPrice-section__price) {
+			font-size: 0.6rem;
+			font-family: $Montserrat;
+
+			@include media('>=tablet') {
+				font-size: 1.2rem;
+			}
+
+			@include media('>=desktop') {
+				font-size: 2.1rem;
+			}
+		}
+
+		p.seoPrice-section__price {
+			font-size: 1.5rem;
+			font-family: $MontserratBold;
+
+			@include media('>=tablet') {
+				font-size: 2.2rem;
+			}
+
+			@include media('>=desktop') {
+				font-size: 3.1rem;
+			}
+
+			@include media('>=widescreen-lg') {
+				font-size: 5.6rem;
+			}
+		}
+
+	}
+
+	&__price {
+		font-size: 2.6rem;
+		font-family: $MontserratBold;
+
+		@include media('>=tablet') {
+			font-size: 5.6rem;
+		}
+	}
+
+	&__cost {
+		font-size: 0.6rem;
+		font-family: $Montserrat;
+		opacity: 1;
+
+		@include media('>=tablet') {
+			font-size: 1.4rem;
+		}
+		@include media('>=desktop') {
+			font-size: 2.1rem;
+		}
+		@include media('>=widescreen') {
+			opacity: 0;
+		}
+	}
+
+	&__pro {
+		font-family: $MontserratBold;
+		font-size: 0.8rem;
+		color: $gray;
+		text-transform: uppercase;
+
+		@include media('>=tablet') {
+			font-size: 1.4rem;
+		}
+		@include media('>=desktop') {
+			font-size: 2.1rem;
+		}
+	}
+
+	.title__h2 {
+		color: $black;
+		font-size: 1.2rem;
+		font-family: $MazzardHBold;
+
+		@include media('>=tablet') {
+			font-size: 1.8rem;
+		}
+
+		@include media('>=desktop') {
+			font-size: 3.8rem;
+		}
+	}
+}
+
+.seoPrice-section.seoPage {
+	.title__h2 {
+		margin-bottom: 1rem;
+
+		@include media(">=widescreen-lg") {
+			margin-bottom: 4rem;
+		}
+	}
+
+	.seoPrice-section__inner {
+		grid-template-columns: 32.5% 32.5% 32.5%;
+		gap: 0.5rem;
+
+		@include media(">=widescreen-lg") {
+			gap: 4.5rem;
+		}
+	}
+
+	.seoPrice-section__card {
+		padding: 0.5rem 0.5rem 0.5rem 0.3rem;
+
+		.seoPrice-section__list {
+
+			span {
+				text-align: left;
+				display: flex;
+				margin-left: -3px;
+			}
+		}
+
+		.seoPrice-section__card-footer {
+			padding-bottom: 0.8rem;
+			padding-left: 0.9rem;
+		}
+	}
+	.seoPrice-section__card li {
+		margin-bottom: 7px;
+		list-style-position: outside;
+
+		&::marker {
+			font-size: 0.4rem;
+			margin-right: -10px;
+
+			@include media(">=widescreen-lg") {
+				font-size: 1.4rem;
+			}
+		}
+	}
+
+	.seoPrice__tarif {
+		padding: 1.2rem 0 1rem 0.8rem;
+	}
+}
