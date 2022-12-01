@@ -1,22 +1,13 @@
 {
-	"globals": {
-		"jQuery": true,
-		"$": true
-	},
-
-	"env": {
-		"browser": true,
-		"node": true
-	},
-	"extends": "airbnb-base",
-	"rules": {
-		"no-underscore-dangle": "off",
-		"linebreak-style": [
-			"error",
-			"windows"
-		],
-		"indent": [2, "tab"],
-        "no-tabs": 0
-	},
-  "noInlineConfig": true
+  "parser": "babel-eslint",
+  "rules": {
+    "no-unused-vars": "warn"
+  },
+  "env": {
+    "es6": true,
+    "browser": true
+  },
+  "extends": [
+    "eslint:recommended"
+  ]
 }
